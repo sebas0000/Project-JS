@@ -1,0 +1,28 @@
+body{
+    background: url('../img/hojas.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background-color: #235e3d;
+}
+
+#menu ul li:hover{
+    background: #235e3d;
+}
+
+.button{
+    background: #235e3d;
+}
+
+.button:hover{
+    background: #184129;
+}
+
+form input[type="submit"]{
+    background: #235e3d;
+}
+
+form input[type="submit"]:hover{
+    background: #184129;
+}

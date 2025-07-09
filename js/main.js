@@ -40,4 +40,14 @@ $(function(){
             `;
             $("#posts").append(post);
         })
-})
+    let tema = $('#tema');
+    $('#green').click(function(){
+        tema.attr('href','css/green.css');
+    });
+    $('#blue').click(function(){
+        tema.attr('href','css/blue.css');
+    });
+    $('#red').click(function(){
+        tema.attr('href','css/red.css');
+    });
+});
