@@ -1,6 +1,14 @@
-*{
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+#global{
+    flex: 1;
 }
 #colores{
     position: fixed;
@@ -53,6 +61,9 @@
     line-height: 80px;
     text-transform: uppercase;
 }
+#logo h1{
+    margin: 0px;
+}
 
 #menu{
     font-family: Helvetica, Arial;
@@ -93,8 +104,14 @@
     margin-bottom: 10px;
 }
 
-.post h2{
+h2{
+    font-family: Helvetica, Arial ;
     font-size: 28px;
+    color: #333;
+}
+h1{
+    font-family: Helvetica, Arial ;
+    font-size: 30px;
     color: #333;
 }
 
@@ -151,8 +168,8 @@
 }
 
 #sidebar p{
-    font-size: 15px;
-    text-align: justify;
+    font-size: 16px;
+    text-align: center;
 }
 
 form input[type="text"],
@@ -186,10 +203,34 @@ footer{
     width: 100%;
     text-align: center  ;
     margin: 50px auto 0px auto;
-    padding: 0px 20px;  
+    padding: 0px;  
     line-height: 47px;
 }
 
 .bx-wrapper, .bx-viewport{
     height: 250px !important    ;
+}
+
+.subir{
+    color: white;
+    text-decoration: none;
+    display: block; 
+    float: right;
+    padding-right: 40px;
+}
+
+#box{
+    width: 55%;
+    float: left;
+    padding: 0px 30px;
+}
+#acordion{   
+    width: 100%;
+    padding: 10px; 
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    color: white;
+}
+#acordion h3{
+    margin-top:10px;
 }

@@ -26,3 +26,7 @@ form input[type="submit"]{
 form input[type="submit"]:hover{
     background: #8f250d;
 }
+#acordion h3{
+    border: #ca3413;
+    background: #ca3413;
+}
