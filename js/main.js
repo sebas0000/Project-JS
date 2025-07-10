@@ -83,8 +83,7 @@ $(function(){
           mode: 'fade',
           captions: true,
           slideWidth: 1200,
-          auto: true,
-          pager:false
+          auto: true
         });
         
     }
