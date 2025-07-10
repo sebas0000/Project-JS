@@ -1,4 +1,9 @@
 $(function(){
+    let tema = $('#tema');
+    let temaGuardado = localStorage.getItem("theme");
+    if(temaGuardado){
+        tema.attr('href', temaGuardado);
+    }
     if(window.location.href.indexOf('index')!= -1)  {
         let posts = [
             {
@@ -62,14 +67,13 @@ $(function(){
         slideWidth: 1200,
         auto: true
     });
-    let tema = $('#tema');
-    attrtema = localStorage.getItem("theme");
-    tema.attr('ref',localStorage.getItem("theme"))
     $('#green').click(function(){
         tema.attr('href','css/green.css');
+        localStorage.setItem("theme", 'css/green.css');
     });
     $('#blue').click(function(){
         tema.attr('href','css/blue.css');
+        localStorage.setItem("theme", 'css/blue.css');
     });
     $('#red').click(function(){
         tema.attr('href','css/red.css');
