@@ -1,11 +1,5 @@
 $(function(){
     if(window.location.href.indexOf('index')!= -1)  {
-        $('.galeria').bxSlider({
-          mode: 'fade',
-          captions: true,
-          slideWidth: 1200,
-          auto: true,
-        });
         let posts = [
             {
                 title: 'Titulo articulo 1',
@@ -47,13 +41,6 @@ $(function(){
         $('#acordion').accordion({collapsible: true}).click(function(){
             $('#acordion h3').addClass('ui-state-active')
         });
-        $('.galeria').bxSlider({
-          mode: 'fade',
-          captions: true,
-          slideWidth: 1200,
-          auto: true
-        });
-        
     }
     if(window.location.href.indexOf('reloj')!= -1){
         setInterval(function(){
@@ -61,6 +48,20 @@ $(function(){
             $('#reloj p').html(reloj)
         },1000)
     }
+    if(window.location.href.indexOf('contacto')!= -1){
+        $('form input[name="fecha-nacimiento"]').datepicker();
+        $.validate({
+            lang: 'es',
+            errorMessagePosition: 'top',
+            scrollToTopOnError: true,
+        });
+    };
+    $('.galeria').bxSlider({
+        mode: 'fade',
+        captions: true,
+        slideWidth: 1200,
+        auto: true
+    });
     let tema = $('#tema');
     attrtema = localStorage.getItem("theme");
     tema.attr('ref',localStorage.getItem("theme"))

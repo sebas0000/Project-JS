@@ -20,6 +20,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/es-mx.min.js"></script>
 
+<!-- Validador jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
 <!-- Tu JS -->
 <script src="js/main.js"></script>
 
@@ -32,7 +35,6 @@
         <div id="blue"></div>
     </div>
     <section id="global">
-        
         <header>
             <div id="logo">
                 <h1>Proyecto JS</h1>
@@ -47,7 +49,7 @@
                 </ul>
             </nav>
         </header>
-                <div id="slider">
+        <div id="slider">
             <div class="galeria">
                 <div><img src="img/hojas.jpg" title="Hojas" /></div>
                 <div><img src="img/rojo.jpg" title="Otoño" /></div>
@@ -56,10 +58,33 @@
         </div>
         <section id="content">
             <div id="box">
-                <div id="reloj">
-                    <h2 class="titulo-reloj">Reloj en tiempo real</h2>
-                    <p></p>
-                </div>
+                <h2>Contacto</h2>
+                <form action="" id="contacto" method="post">
+                    <label for="nombre">Nombre </label>
+                    <input type="text" name="nombre" title="nombre" data-validation="alphanumeric" data-validation-error-msg="El valor no es valido, debe contener solo letras y numeros">
+                    <div class="error-container"></div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" title="apellido" data-validation="alphanumeric" data-validation-error-msg="El valor no es valido, debe contener solo letras y numeros">
+                    <div class="error-container"></div>
+                    <label for="email">Email </label>
+                    <input type="email" name="email" title="email" data-validation="email">
+                    <div class="error-container"></div>
+                    <label for="sexo">Sexo </label>
+                    <select name="sexo" title="sexo" data-validation="required">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                    <div class="error-container"></div>
+                    <label for="fecha-nacimiento">Fecha de nacimiento </label>
+                    <input type="text" name="fecha-nacimiento" title="fecha-nacimiento" data-validation="date" data-validation-format="dd/mm/yyyy">
+                    <div class="error-container"></div>
+                    <label for="edad">Edad </label>
+                    <input type="number" name="edad" title="edad" data-validation="number">
+                    <div class="error-container"></div>
+                    <div id="form-errors"></div>
+                    <input type="submit" value="Enviar">
+                    <div class="clearfix"></div>
+                </form>
             </div>
             <aside id="sidebar">
                 <div id="about">
