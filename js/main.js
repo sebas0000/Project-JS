@@ -42,6 +42,25 @@ $(function(){
                 $("#posts").append(post);
             })
     }
+    if(window.location.href.indexOf('about')!= -1){
+        $('#acordion h3').addClass('ui-state-active')
+        $('#acordion').accordion({collapsible: true}).click(function(){
+            $('#acordion h3').addClass('ui-state-active')
+        });
+        $('.galeria').bxSlider({
+          mode: 'fade',
+          captions: true,
+          slideWidth: 1200,
+          auto: true
+        });
+        
+    }
+    if(window.location.href.indexOf('reloj')!= -1){
+        setInterval(function(){
+            let reloj = moment().format('h:mm:ss')
+            $('#reloj p').html(reloj)
+        },1000)
+    }
     let tema = $('#tema');
     attrtema = localStorage.getItem("theme");
     tema.attr('ref',localStorage.getItem("theme"))
@@ -73,18 +92,4 @@ $(function(){
     $('#logout').click(function(){
         localStorage.clear();
     }).css({'width':'90px','margin':'0px auto'});
-    
-    if(window.location.href.indexOf('about')!= -1){
-        $('#acordion h3').addClass('ui-state-active')
-        $('#acordion').accordion({collapsible: true}).click(function(){
-            $('#acordion h3').addClass('ui-state-active')
-        });
-        $('.galeria').bxSlider({
-          mode: 'fade',
-          captions: true,
-          slideWidth: 1200,
-          auto: true
-        });
-        
-    }
 });
